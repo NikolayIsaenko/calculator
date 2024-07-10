@@ -2,7 +2,7 @@ package pro.sky.calculator.service;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
-import pro.sky.calculator.exeption.DivideByZeroExeption;
+import pro.sky.calculator.exсeption.DivideByZeroExсeption;
 import pro.sky.calculator.service.impl.CalculatorServiceImpl;
 
 
@@ -19,6 +19,7 @@ public class CalculatorServiceImplTest {
 
         Assertions.assertEquals(expectedResult, actualResult);
     }
+
     @Test
     public void shouldCorrectlyCalculateMinus() {
         int num1 = 30;
@@ -29,6 +30,7 @@ public class CalculatorServiceImplTest {
 
         Assertions.assertEquals(expectedResult, actualResult);
     }
+
     @Test
     public void shouldCorrectlyCalculateMultiply() {
         int num1 = 3;
@@ -39,6 +41,7 @@ public class CalculatorServiceImplTest {
 
         Assertions.assertEquals(expectedResult, actualResult);
     }
+
     @Test
     public void shouldCorrectlyCalculateDivide() {
         int num1 = 6;
@@ -54,7 +57,6 @@ public class CalculatorServiceImplTest {
     public void shouldThrowExeptionWhenDivideByZero() {
         int num1 = 10;
         int num2 = 0;
-        Assertions.assertThrows(DivideByZeroExeption.class,
-                () -> calculatorService.divide(num1, num2));
+        Assertions.assertThrows(DivideByZeroExсeption.class, () -> calculatorService.divide(num1, num2));
     }
 }

@@ -28,6 +28,7 @@ public class CalculatorServiceImplParamTest {
         Integer actualResult = calculatorService.plus(num1, num2);
         Assertions.assertEquals(expectedResult, actualResult);
     }
+
     @ParameterizedTest
     @MethodSource("provideArguments")
     public void shouldCorrectlyCalculateMinus(Integer num1, Integer num2) {
@@ -35,6 +36,7 @@ public class CalculatorServiceImplParamTest {
         Integer actualResult = calculatorService.minus(num1, num2);
         Assertions.assertEquals(expectedResult, actualResult);
     }
+
     @ParameterizedTest
     @MethodSource("provideArguments")
     public void shouldCorrectlyCalculateMultiply(Integer num1, Integer num2) {
@@ -42,6 +44,7 @@ public class CalculatorServiceImplParamTest {
         Integer actualResult = calculatorService.multiply(num1, num2);
         Assertions.assertEquals(expectedResult, actualResult);
     }
+
     @ParameterizedTest
     @MethodSource("provideArguments")
     public void shouldCorrectlyCalculateDivide(Integer num1, Integer num2) {

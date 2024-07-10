@@ -49,7 +49,7 @@ public class CalculatorController {
 
     @GetMapping("divide")
     public String divide(@RequestParam(name = "num1", required = false) Integer num1, @RequestParam(name = "num2", required = false) Integer num2) {
-        if (num1 == 0) {
+        if (num1 == null || num2 == null) {
             return "Введите число";
         }
         return num1 + " / " + num2 + " = " + calculatorService.divide(num1, num2);
