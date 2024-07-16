@@ -52,9 +52,6 @@ public class CalculatorController {
         if (num1 == null || num2 == null) {
             return "Введите число";
         }
-        if (num1 == 0 || num2 == 0) {
-            return "На ноль делить нельзя";
-        }
         return num1 + " / " + num2 + " = " + calculatorService.divide(num1, num2);
     }
 }
